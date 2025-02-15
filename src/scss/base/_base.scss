@@ -1,0 +1,20 @@
+* {
+  font-family: "Inter", serif;
+}
+
+#root {
+  isolation: isolate;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  width: 100%;
+}

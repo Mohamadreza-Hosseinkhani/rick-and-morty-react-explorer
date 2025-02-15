@@ -1,5 +1,9 @@
 const App = () => {
-  return <h1>Rick & Morty App</h1>;
+  return (
+    <div>
+      <h1>Rick & Morty</h1>
+    </div>
+  );
 };
 
 export default App;

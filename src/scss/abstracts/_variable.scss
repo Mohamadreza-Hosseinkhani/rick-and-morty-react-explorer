@@ -1,13 +1,36 @@
-// Primary Colors
+//* ========== COLORS ==========
 $color-primary-900: #1a1a1a;
 $color-primary-800: #1e1e20;
 $color-neutral-600: #313234;
 
-// Neutral Colors
 $color-neutral-black: #000000;
 $color-neutral-white: #ffffff;
 
-// Accent Colors
 $color-accent-primary: #11b0c8;
 $color-accent-secondary: #42b4ca;
 $color-accent-tertiary: #bfde42;
+
+//* ========== SPACES ==========
+$space-xs: 0.5rem;
+$space-sm: 0.75rem;
+$space-md: 1rem;
+$space-lg: 1.25rem;
+$space-xl: 1.5rem;
+$space-2xl: 2rem;
+$space-3xl: 4rem;
+$space-4xl: 6rem;
+
+//* ========== BORDER RADIUS ==========
+$rounded-xs: 8px;
+$rounded-sm: 12px;
+$rounded-md: 16px;
+$rounded-lg: 18px;
+$rounded-xl: 32px;
+$rounded-full: 100%;
+
+//* ========== BREAKPOINTS ==========
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 896px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
