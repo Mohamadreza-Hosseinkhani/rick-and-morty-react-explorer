@@ -33,7 +33,8 @@ $rounded-xl: 32px;
 $rounded-full: 100%;
 
 //* ========== BOX SHADOW ==========
-$shadow-1: 0 0 50px 70px light-dark(#fff, #7575750a);
+// $shadow-1: 0 0 50px 70px light-dark(#fff, #7575750a);
+$shadow-1: 0 0 50px 70px light-dark(#ffffff00, #7575750a);
 
 //* ========== BREAKPOINTS ==========
 $breakpoint-xs: 480px;
