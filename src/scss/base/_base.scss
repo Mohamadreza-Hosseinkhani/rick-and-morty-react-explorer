@@ -1,5 +1,11 @@
+@use "../abstracts/variable";
+
 * {
   font-family: "Inter", serif;
+}
+
+:root {
+  color-scheme: light dark;
 }
 
 #root {
@@ -8,6 +14,8 @@
 
 body {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: light-dark(variable.$color-white, variable.$color-gray-800);
 }
 
 img,
@@ -17,4 +25,17 @@ canvas,
 svg {
   display: block;
   width: 100%;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+header,
+section:is(.hero, .characters, .episodes, .location),
+footer {
+  max-width: 71.25rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
 }

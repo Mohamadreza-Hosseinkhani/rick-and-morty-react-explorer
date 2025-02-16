@@ -1,14 +1,18 @@
 //* ========== COLORS ==========
-$color-primary-900: #1a1a1a;
-$color-primary-800: #1e1e20;
-$color-neutral-600: #313234;
+$color-black: #000000;
+$color-white: #ffffff;
 
-$color-neutral-black: #000000;
-$color-neutral-white: #ffffff;
+$color-gray-50: #f9f9f9;
+$color-gray-100: #f1f1f1;
+$color-gray-700: #313234;
+$color-gray-800: #1e1e20;
+$color-gray-900: #1a1a1a;
 
-$color-accent-primary: #11b0c8;
-$color-accent-secondary: #42b4ca;
-$color-accent-tertiary: #bfde42;
+$color-primary-500: #42b4ca;
+$color-primary-600: #11b0c8;
+
+$color-accent-red: #fa1f00;
+$color-accent-lime: #bfde42;
 
 //* ========== SPACES ==========
 $space-xs: 0.5rem;
@@ -27,6 +31,9 @@ $rounded-md: 16px;
 $rounded-lg: 18px;
 $rounded-xl: 32px;
 $rounded-full: 100%;
+
+//* ========== BOX SHADOW ==========
+$shadow-1: 0 0 50px 70px light-dark(#fff, #7575750a);
 
 //* ========== BREAKPOINTS ==========
 $breakpoint-xs: 480px;
