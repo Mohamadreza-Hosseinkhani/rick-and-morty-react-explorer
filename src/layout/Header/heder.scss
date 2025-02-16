@@ -1,0 +1,95 @@
+@use "/src/scss/abstracts/variable";
+@use "/src/scss/abstracts/mixin";
+
+.haeder {
+  position: sticky;
+  top: 0;
+  column-gap: variable.$space-md;
+  margin: variable.$space-md auto;
+}
+
+.haeder__logo {
+  width: 4.5rem;
+}
+
+.haeder__logo--desktop {
+  display: none;
+}
+
+.header__form {
+  position: relative;
+  flex-grow: 1;
+}
+
+.header__form__input {
+  width: 100%;
+  padding: variable.$space-sm variable.$space-md;
+  background-color: light-dark(
+    variable.$color-gray-100,
+    variable.$color-gray-900
+  );
+  color: light-dark(variable.$color-gray-700, variable.$color-gray-50);
+  border: 1px solid transparent;
+  border-radius: variable.$rounded-xl;
+  letter-spacing: 1px;
+  box-shadow: variable.$shadow-1;
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.header__form__search-icon {
+  position: absolute;
+  top: calc(50% - 35%);
+  right: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+
+  svg {
+    fill: light-dark(variable.$color-gray-700, variable.$color-gray-50);
+  }
+}
+
+.haeder__logo--mobile {
+  position: absolute;
+  top: calc(50% - 25%);
+  left: 6.25rem;
+  cursor: text;
+}
+
+//* ==================== MEDIA QUERYS ====================
+@media (min-width: variable.$breakpoint-lg) {
+  .haeder {
+    @include mixin.flex-row-between;
+    padding: variable.$space-2xl;
+  }
+
+  .haeder__logo--desktop {
+    display: block;
+    width: 10rem;
+  }
+
+  .header__form {
+    margin-left: 10rem;
+  }
+
+  .header__form__input {
+    padding: variable.$space-md variable.$space-2xl;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      border: 1px solid variable.$color-primary-500;
+    }
+  }
+
+  .header__form__search-icon {
+    top: calc(50% - 28%);
+    right: 2rem;
+  }
+
+  .haeder__logo--mobile {
+    display: none;
+  }
+}

@@ -1,7 +1,9 @@
+import Header from "./layout/Header/Header";
+
 const App = () => {
   return (
     <div>
-      <h1>Rick & Morty</h1>
+      <Header />
     </div>
   );
 };
