@@ -1,0 +1,134 @@
+@use "/src/scss/abstracts/variable";
+@use "/src/scss/abstracts/mixin";
+@use "/src/scss/base/typography";
+
+.hero {
+  background-color: light-dark(variable.$color-white, variable.$color-black);
+  border-bottom: 2px solid variable.$color-primary-600;
+  margin-top: 6rem !important;
+}
+
+.hero__content {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__content__haeding {
+  font-size: 2.5rem;
+  color: light-dark(variable.$color-gray-700, variable.$color-white);
+
+  span {
+    color: variable.$color-primary-600;
+  }
+}
+
+.hero__content__text {
+  margin: variable.$space-3xl 0 variable.$space-xl 0;
+}
+
+.hero__content__list {
+  @include mixin.flex-row-center;
+  max-width: 28.5rem;
+  margin: 0 auto;
+  font-size: typography.$text-xs;
+
+  li {
+    text-align: center;
+    flex-grow: 1;
+
+    &:not(:last-child) {
+      border-right: 1px solid;
+    }
+  }
+}
+
+.hero__theme-btns {
+  @include mixin.flex-row-center;
+  column-gap: variable.$space-md;
+  margin: variable.$space-4xl 0 variable.$space-2xl 0;
+}
+
+.theme-btns__btn {
+  @include mixin.flex-row-center;
+  column-gap: variable.$space-xs;
+  cursor: default;
+}
+
+.theme-btns__btn.active-theme {
+  background-color: variable.$color-primary-600;
+  width: 5.625rem;
+  height: 2rem;
+  border-radius: variable.$rounded-xl;
+}
+
+.theme-btns__btn--light.active-theme {
+  color: variable.$color-white;
+}
+
+.theme-btns__btn__icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.theme-btns__btn__text {
+  font-size: typography.$text-sm;
+}
+
+.hero__theme-text {
+  color: variable.$color-primary-600;
+  margin-bottom: 5rem;
+}
+
+.hero__image {
+  margin: variable.$space-4xl auto 0 auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme__btn--light {
+    width: 5.625rem;
+    height: 2rem;
+    border-radius: variable.$rounded-xl;
+    background-color: variable.$color-gray-700;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .hero__image {
+    max-width: 28.125rem;
+  }
+}
+
+//* ==================== MEDIA QUERYS ====================
+@media (min-width: variable.$breakpoint-xs) {
+  .hero__content__haeding {
+    font-size: 3rem;
+  }
+
+  .hero__content__text {
+    font-style: initial;
+  }
+
+  .hero__content__list {
+    font-size: initial;
+  }
+}
+
+@media (min-width: variable.$breakpoint-sm) {
+}
+
+@media (min-width: variable.$breakpoint-lg) {
+  .hero {
+    @include mixin.flex-row-between;
+    margin-top: 10rem !important;
+  }
+
+  .hero__content__haeding {
+    text-align: left;
+  }
+
+  .hero__image {
+    margin-top: auto;
+  }
+}
